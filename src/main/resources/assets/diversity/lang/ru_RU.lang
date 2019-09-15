@@ -1,0 +1,91 @@
+
+entity.diversity.inuit.name=Житель Инуит
+entity.diversity.inuit.fisherman.name=Рыбак
+entity.diversity.inuit.hunter.name=Охотник
+entity.diversity.inuit.chief.name=Вождь
+entity.diversity.inuit.kennelmaster.name=Владелец питомника
+
+entity.diversity.apache.name=Житель Апачи
+entity.diversity.apache.breeder.name=Коневод
+entity.diversity.apache.hunter.name=Охотник
+entity.diversity.apache.shaman.name=Шаман
+entity.diversity.apache.chief.name=Вождь
+entity.diversity.apache.warrior.name=Воин
+
+entity.diversity.aztec.name=Житель Ацтек
+entity.diversity.aztec.breeder.name=Скотовод
+entity.diversity.aztec.dyer.name=Красильщик
+entity.diversity.aztec.hunter.name=Охотник
+entity.diversity.aztec.chief.name=Император
+entity.diversity.aztec.highpriest.name=Жрец
+entity.diversity.aztec.farmer.name=Фермер
+
+entity.diversity.zulu.name=Житель Зулус
+entity.diversity.zulu.farmer.name=Фермер
+entity.diversity.zulu.warrior.name=Воин
+entity.diversity.zulu.breeder.name=Скотовод
+entity.diversity.zulu.chief.name=Вождь
+entity.diversity.zulu.guru.name=Гуру
+
+entity.diversity.tibetan.name=Житель Тибета
+entity.diversity.tibetan.monk.name=Монах
+entity.diversity.tibetan.master.name=Учитель
+entity.diversity.tibetan.greatwise.name=Мудрый мастер
+
+entity.diversity.egyptian.name=Житель Египтянин
+entity.diversity.egyptian.farmer.name=Фермер
+entity.diversity.egyptian.sculptor.name=Скульптор
+entity.diversity.egyptian.scribe.name=Писец
+entity.diversity.egyptian.priest.name=Жрец Солнца
+entity.diversity.egyptian.painter.name=Художник
+entity.diversity.egyptian.pharaoh.name=Фараон
+entity.diversity.egyptian.guard.name=Стражник
+
+entity.diversity.lakeside.name=Житель Берега озера
+entity.diversity.lakeside.farmer.name=Фермер
+entity.diversity.lakeside.breeder.name=Скотовод
+entity.diversity.lakeside.fisherman.name=Рыбак
+entity.diversity.lakeside.guard.name=Охраник
+entity.diversity.lakeside.chief.name=Глава деревни
+
+entity.diversity.settled.name=Житель полей
+entity.diversity.settled.butcher.name=Мясник
+entity.diversity.settled.farmer.name=Фермер
+entity.diversity.settled.librarian.name=Библиотекарь
+entity.diversity.settled.priest.name=Священник
+entity.diversity.settled.smith.name=Кузнец
+entity.diversity.settled.villager.name=Житель
+entity.diversity.settled.guard.name=Защитник
+entity.diversity.settled.innkeeper.name=Трактирщик
+
+entity.diversity.mummy.name=Мумия
+entity.diversity.tzitzimime.name=Дух ацтека
+entity.diversity.warrior_skeleton.name=Воин скелет
+entity.diversity.worshipper.name=Сектант
+
+item.blowgun.name=Духовая трубка
+item.dart.name=Дротик
+item.iron_spear.name=Железное копье
+item.wooden_spear.name=Деревянное копье
+item.stone_spear.name=Каменное копье
+item.diamond_spear.name=Алмазное копье
+item.golden_spear.name=Золотое копье
+
+entity.diversity.darkspider.name=Темный Паук
+entity.diversity.yeti.name=Снежный Человек
+
+entity.diversity.dwarf.name=Деревенский Гном
+entity.diversity.dwarf.warrior.name=Воин
+entity.diversity.dwarf.smith.name=Кузнец
+entity.diversity.dwarf.healer.name=Целитель
+entity.diversity.dwarf.king.name=Король
+entity.diversity.dwarf.miner.name=Шахтер
+
+item.phos_water_bucket.name=Фосфоресцирующoe Ведро Воды
+item.poison_water_bucket.name=Отравленное Ведро Воды
+
+tile.phos_mushroom.name=Фосфоресцирующий Гриб
+tile.blue_mushroom.name=Синий Гриб
+tile.blue_vine.name=Синие Лианы
+tile.fungal.name=Грибковый
+tile.fungus.name=Гриб

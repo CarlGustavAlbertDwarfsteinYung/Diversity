@@ -1,0 +1,15 @@
+.gradle
+/build/
+/out/
+/run/
+gradle-app.setting
+!gradle-wrapper.jar
+.gradletasknamecache
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+*.iml
+*.ipr
+*.iws

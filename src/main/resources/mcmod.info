@@ -1,0 +1,16 @@
+[
+{
+  "modid": "diversity",
+  "name": "Diversity",
+  "description": "This mod adds villages, structures and caves in Minecraft",
+  "version": "1.6.1",
+  "mcversion": "1.7.10",
+  "url": "http://minecraft-diversity.com/",
+  "updateUrl": "",
+  "authorList": ["Budd","Daveyx0"],
+  "credits": "Diversity Team",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

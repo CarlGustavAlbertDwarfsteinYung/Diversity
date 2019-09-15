@@ -1,0 +1,91 @@
+
+entity.diversity.inuit.name=Inuit Villager
+entity.diversity.inuit.fisherman.name=Fisherman
+entity.diversity.inuit.hunter.name=Hunter
+entity.diversity.inuit.chief.name=Chief
+entity.diversity.inuit.kennelmaster.name=Kennel Master
+
+entity.diversity.apache.name=Apache Villager
+entity.diversity.apache.breeder.name=Breeder
+entity.diversity.apache.hunter.name=Hunter
+entity.diversity.apache.shaman.name=Shaman
+entity.diversity.apache.chief.name=Chief
+entity.diversity.apache.warrior.name=Warrior
+
+entity.diversity.aztec.name=Aztec Villager
+entity.diversity.aztec.breeder.name=Breeder
+entity.diversity.aztec.dyer.name=Dyer
+entity.diversity.aztec.hunter.name=Hunter
+entity.diversity.aztec.chief.name=Chief
+entity.diversity.aztec.highpriest.name=High Priest
+entity.diversity.aztec.farmer.name=Farmer
+
+entity.diversity.zulu.name=Zulu Villager
+entity.diversity.zulu.farmer.name=Farmer
+entity.diversity.zulu.warrior.name=Warrior
+entity.diversity.zulu.breeder.name=Breeder
+entity.diversity.zulu.chief.name=Chief
+entity.diversity.zulu.guru.name=Guru
+
+entity.diversity.tibetan.name=Tibetan Villager
+entity.diversity.tibetan.monk.name=Monk
+entity.diversity.tibetan.master.name=Master
+entity.diversity.tibetan.greatwise.name=Great Wise
+
+entity.diversity.egyptian.name=Egyptian Villager
+entity.diversity.egyptian.farmer.name=Farmer
+entity.diversity.egyptian.sculptor.name=Sculptor
+entity.diversity.egyptian.scribe.name=Scribe
+entity.diversity.egyptian.priest.name=Priest
+entity.diversity.egyptian.painter.name=Painter
+entity.diversity.egyptian.pharaoh.name=Pharaoh
+entity.diversity.egyptian.guard.name=Guard
+
+entity.diversity.lakeside.name=Lakeside Villager
+entity.diversity.lakeside.farmer.name=Farmer
+entity.diversity.lakeside.breeder.name=Breeder
+entity.diversity.lakeside.fisherman.name=Fisherman
+entity.diversity.lakeside.guard.name=Guard
+entity.diversity.lakeside.chief.name=Chief
+
+entity.diversity.settled.name=Settled Villager
+entity.diversity.settled.butcher.name=Butcher
+entity.diversity.settled.farmer.name=Farmer
+entity.diversity.settled.librarian.name=Librarian
+entity.diversity.settled.priest.name=Priest
+entity.diversity.settled.smith.name=Smith
+entity.diversity.settled.villager.name=Villager
+entity.diversity.settled.guard.name=Guard
+entity.diversity.settled.innkeeper.name=Innkeeper
+
+entity.diversity.mummy.name=Mummy
+entity.diversity.tzitzimime.name=Tzitzimitl
+entity.diversity.warrior_skeleton.name=Warrior Skeleton
+entity.diversity.worshipper.name=Worshipper
+
+item.blowgun.name=Blowgun
+item.dart.name=Dart
+item.iron_spear.name=Iron Spear
+item.wooden_spear.name=Wooden Spear
+item.stone_spear.name=Stone Spear
+item.diamond_spear.name=Diamond Spear
+item.golden_spear.name=Golden Spear
+
+
+entity.diversity.darkspider.name=Dark Spider
+entity.diversity.yeti.name=Yeti
+
+entity.diversity.dwarf.name=Dwarf Villager
+entity.diversity.dwarf.warrior.name=Warrior
+entity.diversity.dwarf.smith.name=Smith
+entity.diversity.dwarf.healer.name=Healer
+entity.diversity.dwarf.king.name=King
+entity.diversity.dwarf.miner.name=Miner
+
+item.phos_water_bucket.name=Phosphorescent Water Bucket
+item.poison_water_bucket.name=Poison Water Bucket
+tile.phos_mushroom.name=Phosphorescent Mushroom
+tile.blue_mushroom.name=Blue Mushroom
+tile.blue_vine.name=Blue Vine
+tile.fungal.name=Fungal
+tile.fungus.name=Fungus

@@ -1,0 +1,91 @@
+
+entity.diversity.inuit.name=Inuit Dorpeling
+entity.diversity.inuit.fisherman.name=Visser
+entity.diversity.inuit.hunter.name=Jager
+entity.diversity.inuit.chief.name=Leider
+entity.diversity.inuit.kennelmaster.name=Kennel Meester
+
+entity.diversity.apache.name=Apache Dorpeling
+entity.diversity.apache.breeder.name=Fokker
+entity.diversity.apache.hunter.name=Jager
+entity.diversity.apache.shaman.name=Shaman
+entity.diversity.apache.chief.name=Opperhoofd
+entity.diversity.apache.warrior.name=Strijder
+
+entity.diversity.aztec.name=Azteekse Dorpeling
+entity.diversity.aztec.breeder.name=Fokker
+entity.diversity.aztec.dyer.name=Verver
+entity.diversity.aztec.hunter.name=Jager
+entity.diversity.aztec.chief.name=Leider
+entity.diversity.aztec.highpriest.name=Hoge Priester
+entity.diversity.aztec.farmer.name=Boer
+
+entity.diversity.zulu.name=Zoeloe Dorpeling
+entity.diversity.zulu.farmer.name=Boer
+entity.diversity.zulu.warrior.name=Strijder
+entity.diversity.zulu.breeder.name=Fokker
+entity.diversity.zulu.chief.name=Leider
+entity.diversity.zulu.guru.name=Goeroe
+
+entity.diversity.tibetan.name=Tibetaanse Dorpeling
+entity.diversity.tibetan.monk.name=Monnik
+entity.diversity.tibetan.master.name=Meester
+entity.diversity.tibetan.greatwise.name=De Wijze
+
+entity.diversity.egyptian.name=Egyptische Dorpeling
+entity.diversity.egyptian.farmer.name=Boer
+entity.diversity.egyptian.sculptor.name=Beeldhouwer
+entity.diversity.egyptian.scribe.name=Schriftgeleerde
+entity.diversity.egyptian.priest.name=Priester
+entity.diversity.egyptian.painter.name=Verver
+entity.diversity.egyptian.pharaoh.name=Pharaoh
+entity.diversity.egyptian.guard.name=Bewaker
+
+entity.diversity.lakeside.name=Oever Dorpeling
+entity.diversity.lakeside.farmer.name=Boer
+entity.diversity.lakeside.breeder.name=Fokker
+entity.diversity.lakeside.fisherman.name=Visser
+entity.diversity.lakeside.guard.name=Bewaker
+entity.diversity.lakeside.chief.name=Leider
+
+entity.diversity.settled.name=Gevestigde Dorpeling
+entity.diversity.settled.butcher.name=Slager
+entity.diversity.settled.farmer.name=Boer
+entity.diversity.settled.librarian.name=Bibliothecaris
+entity.diversity.settled.priest.name=Priester
+entity.diversity.settled.smith.name=Smid
+entity.diversity.settled.villager.name=Dorpeling
+entity.diversity.settled.guard.name=Bewaker
+entity.diversity.settled.innkeeper.name=Herbergier
+
+entity.diversity.mummy.name=Mummie
+entity.diversity.tzitzimime.name=Tzitzimitl
+entity.diversity.warrior_skeleton.name=Strijder Skelet
+entity.diversity.worshipper.name=Aanbidder
+
+item.blowgun.name=Blaaspijp
+item.dart.name=Pijl
+item.iron_spear.name=Ijzere Speer
+item.wooden_spear.name=Houten Speer
+item.stone_spear.name=Stenen Speer
+item.diamond_spear.name=Diamanten Speer
+item.golden_spear.name=Gouden Speer
+
+
+entity.diversity.darkspider.name=Duistere Spin
+entity.diversity.yeti.name=Yeti
+
+entity.diversity.dwarf.name=Dwerg Dorpeling
+entity.diversity.dwarf.warrior.name=Strijder
+entity.diversity.dwarf.smith.name=Smid
+entity.diversity.dwarf.healer.name=Heler
+entity.diversity.dwarf.king.name=Koning
+entity.diversity.dwarf.miner.name=Mijner
+
+item.phos_water_bucket.name=Emmer met Fosforescerend Water
+item.poison_water_bucket.name=Emmer met Giftig Water
+tile.phos_mushroom.name=Fosforescerende Paddestoel
+tile.blue_mushroom.name=Blauwe Paddestoel
+tile.blue_vine.name=Blauwe Lianen
+tile.fungal.name=Schimmel
+tile.fungus.name=Paddestoel

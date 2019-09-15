@@ -1,0 +1,91 @@
+
+entity.diversity.inuit.name=Aldeano Inuit
+entity.diversity.inuit.fisherman.name=Pescador
+entity.diversity.inuit.hunter.name=Cazador
+entity.diversity.inuit.chief.name=Jefe
+entity.diversity.inuit.kennelmaster.name=Maestro de la Perrera
+
+entity.diversity.apache.name=Aldeano Apache
+entity.diversity.apache.breeder.name=Criador
+entity.diversity.apache.hunter.name=Cazador
+entity.diversity.apache.shaman.name=Chamán
+entity.diversity.apache.chief.name=Jefe
+entity.diversity.apache.warrior.name=Guerrero
+
+entity.diversity.aztec.name=Aldeano Azteca
+entity.diversity.aztec.breeder.name=Criador
+entity.diversity.aztec.dyer.name=Tintorero
+entity.diversity.aztec.hunter.name=Cazador
+entity.diversity.aztec.chief.name=Jefe
+entity.diversity.aztec.highpriest.name=Sacerdote
+entity.diversity.aztec.farmer.name=Agricultor
+
+entity.diversity.zulu.name=Aldeano Zulú
+entity.diversity.zulu.farmer.name=Agricultor
+entity.diversity.zulu.warrior.name=Guerrero
+entity.diversity.zulu.breeder.name=Criador
+entity.diversity.zulu.chief.name=Jefe
+entity.diversity.zulu.guru.name=Gurú
+
+entity.diversity.tibetan.name=Aldeano Tibetano
+entity.diversity.tibetan.monk.name=Monje
+entity.diversity.tibetan.master.name=Maestro
+entity.diversity.tibetan.greatwise.name=Gran Sabio
+
+entity.diversity.egyptian.name=Aldeano Egipcia
+entity.diversity.egyptian.farmer.name=Agricultor
+entity.diversity.egyptian.sculptor.name=Escultor
+entity.diversity.egyptian.scribe.name=Escriba
+entity.diversity.egyptian.priest.name=Sacerdote
+entity.diversity.egyptian.painter.name=Pintor
+entity.diversity.egyptian.pharaoh.name=Faraón
+entity.diversity.egyptian.guard.name=Custodia
+
+entity.diversity.lakeside.name=Aldeano Lago
+entity.diversity.lakeside.farmer.name=Agricultor
+entity.diversity.lakeside.breeder.name=Criador
+entity.diversity.lakeside.fisherman.name=Pescador
+entity.diversity.lakeside.guard.name=Custodia
+entity.diversity.lakeside.chief.name=Jefe
+
+entity.diversity.settled.name=Aldeano Sedentaria
+entity.diversity.settled.butcher.name=Carnicero
+entity.diversity.settled.farmer.name=Agricultor
+entity.diversity.settled.librarian.name=Bibliotecario
+entity.diversity.settled.priest.name=Sacerdote
+entity.diversity.settled.smith.name=Herrero
+entity.diversity.settled.villager.name=Aldeano
+entity.diversity.settled.guard.name=Custodia
+entity.diversity.settled.innkeeper.name=Posadero
+
+entity.diversity.mummy.name=Momia
+entity.diversity.tzitzimime.name=Tzitzimitl
+entity.diversity.warrior_skeleton.name=Guerrero Esqueleto
+entity.diversity.worshipper.name=Adorador
+
+item.blowgun.name=Cerbatana
+item.dart.name=Dardo
+item.iron_spear.name=Lanza de hierro
+item.wooden_spear.name=Lanza de madera
+item.stone_spear.name=Lanza de piedra
+item.diamond_spear.name=Lanza diamante
+item.golden_spear.name=Lanza de oro
+
+entity.diversity.darkspider.name=Araña oscura
+entity.diversity.yeti.name=Yeti
+
+entity.diversity.dwarf.name=Aldeano Enana
+entity.diversity.dwarf.warrior.name=Guerrero
+entity.diversity.dwarf.smith.name=Herrero
+entity.diversity.dwarf.healer.name=Curador
+entity.diversity.dwarf.king.name=Rey
+entity.diversity.dwarf.miner.name=Minero
+
+
+item.phos_water_bucket.name=Sello de Agua Forsforescente
+item.poison_water_bucket.name=Sello de Agua Envenenada
+tile.phos_mushroom.name=Hongo Forsforescente
+tile.blue_mushroom.name=Hongo Azul
+tile.blue_vine.name=Liana Azul
+tile.fungal.name=Hongos
+tile.fungus.name=Hongo

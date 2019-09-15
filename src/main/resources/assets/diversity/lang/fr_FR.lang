@@ -1,0 +1,91 @@
+
+entity.diversity.inuit.name=Villageois Inuit
+entity.diversity.inuit.fisherman.name=Pêcheur
+entity.diversity.inuit.hunter.name=Chasseur
+entity.diversity.inuit.chief.name=Chef
+entity.diversity.inuit.kennelmaster.name=Maître de Chenil
+
+entity.diversity.apache.name=Villageois Apache
+entity.diversity.apache.breeder.name=Eleveur
+entity.diversity.apache.hunter.name=Chasseur
+entity.diversity.apache.shaman.name=Shaman
+entity.diversity.apache.chief.name=Chef
+entity.diversity.apache.warrior.name=Guerrier
+
+entity.diversity.aztec.name=Villageois Aztèque
+entity.diversity.aztec.breeder.name=Eleveur
+entity.diversity.aztec.dyer.name=Teinturier
+entity.diversity.aztec.hunter.name=Chasseur
+entity.diversity.aztec.chief.name=Chef
+entity.diversity.aztec.highpriest.name=Haut Prêtre
+entity.diversity.aztec.farmer.name=Fermier
+
+entity.diversity.zulu.name=Villageois Zoulou
+entity.diversity.zulu.farmer.name=Fermier
+entity.diversity.zulu.warrior.name=Guerrier
+entity.diversity.zulu.breeder.name=Eleveur
+entity.diversity.zulu.chief.name=Chef
+entity.diversity.zulu.guru.name=Gourou
+
+entity.diversity.tibetan.name=Villageois Tibetain
+entity.diversity.tibetan.monk.name=Moine
+entity.diversity.tibetan.master.name=Maître
+entity.diversity.tibetan.greatwise.name=Grand Sage
+
+entity.diversity.egyptian.name=Villageois Egyptien
+entity.diversity.egyptian.farmer.name=Fermier
+entity.diversity.egyptian.sculptor.name=Sculpteur
+entity.diversity.egyptian.scribe.name=Scribe
+entity.diversity.egyptian.priest.name=Prêtre
+entity.diversity.egyptian.painter.name=Peintre
+entity.diversity.egyptian.pharaoh.name=Pharaon
+entity.diversity.egyptian.guard.name=Garde
+
+entity.diversity.lakeside.name=Villageois Lacustre
+entity.diversity.lakeside.farmer.name=Fermier
+entity.diversity.lakeside.breeder.name=Eleveur
+entity.diversity.lakeside.fisherman.name=Pêcheur
+entity.diversity.lakeside.guard.name=Garde
+entity.diversity.lakeside.chief.name=Chef
+
+entity.diversity.settled.name=Villageois Sédentaire
+entity.diversity.settled.butcher.name=Boucher
+entity.diversity.settled.farmer.name=Fermier
+entity.diversity.settled.librarian.name=Bibliothécaire
+entity.diversity.settled.priest.name=Prêtre
+entity.diversity.settled.smith.name=Forgeron
+entity.diversity.settled.villager.name=Villageois
+entity.diversity.settled.guard.name=Garde
+entity.diversity.settled.innkeeper.name=Aubergiste
+
+entity.diversity.mummy.name=Momie
+entity.diversity.tzitzimime.name=Tzitzimitl
+entity.diversity.warrior_skeleton.name=Guerrier Squelette
+entity.diversity.worshipper.name=Adorateur
+
+item.blowgun.name=Sarbacane
+item.dart.name=Fléchette
+item.iron_spear.name=Lance en fer
+item.wooden_spear.name=Lance en bois
+item.stone_spear.name=Lance en pierre
+item.diamond_spear.name=Lance en diamant
+item.golden_spear.name=Lance en or
+
+entity.diversity.darkspider.name=Veuve Noire
+entity.diversity.yeti.name=Yeti
+
+entity.diversity.dwarf.name=Villageois Nain
+entity.diversity.dwarf.warrior.name=Guerrier
+entity.diversity.dwarf.smith.name=Forgeron
+entity.diversity.dwarf.healer.name=Soigneur
+entity.diversity.dwarf.king.name=Roi
+entity.diversity.dwarf.miner.name=Mineur
+
+
+item.phos_water_bucket.name=Sceau d'Eau Phosphorescente
+item.poison_water_bucket.name=Sceau d'Eau Empoisonnée
+tile.phos_mushroom.name=Champignon Phosphorescent
+tile.blue_mushroom.name=Champignon Bleu
+tile.blue_vine.name=Liane Bleue
+tile.fungal.name=Sol Fongique
+tile.fungus.name=Fongus

@@ -1,0 +1,91 @@
+
+entity.diversity.inuit.name=Inuit Dorfbewohner
+entity.diversity.inuit.fisherman.name=Fischer
+entity.diversity.inuit.hunter.name=Jäger
+entity.diversity.inuit.chief.name=Chef
+entity.diversity.inuit.kennelmaster.name=Kennel Master
+
+entity.diversity.apache.name=Apache Dorfbewohner
+entity.diversity.apache.breeder.name=Züchter
+entity.diversity.apache.hunter.name=Jäger
+entity.diversity.apache.shaman.name=Shamane
+entity.diversity.apache.chief.name=Chef
+entity.diversity.apache.warrior.name=Krieger
+
+entity.diversity.aztec.name=Aztec Dorfbewohner
+entity.diversity.aztec.breeder.name=Züchter
+entity.diversity.aztec.dyer.name=Färber
+entity.diversity.aztec.hunter.name=Jäger
+entity.diversity.aztec.chief.name=Chef
+entity.diversity.aztec.highpriest.name=Hohepriester
+entity.diversity.aztec.farmer.name=Bauer
+
+entity.diversity.zulu.name=Zulu Dorfbewohner
+entity.diversity.zulu.farmer.name=Bauer
+entity.diversity.zulu.warrior.name=Krieger
+entity.diversity.zulu.breeder.name=Züchter
+entity.diversity.zulu.chief.name=Chef
+entity.diversity.zulu.guru.name=Guru
+
+entity.diversity.tibetan.name=Tibetische Dorfbewohner
+entity.diversity.tibetan.monk.name=Mönch
+entity.diversity.tibetan.master.name=Master
+entity.diversity.tibetan.greatwise.name=Großer Weiser
+
+entity.diversity.egyptian.name=Ägyptische Dorfbewohner
+entity.diversity.egyptian.farmer.name=Bauer
+entity.diversity.egyptian.sculptor.name=Bildhauer
+entity.diversity.egyptian.scribe.name=Schreiber
+entity.diversity.egyptian.priest.name=Priester
+entity.diversity.egyptian.painter.name=Maler
+entity.diversity.egyptian.pharaoh.name=Pharao
+entity.diversity.egyptian.guard.name=Wache
+
+entity.diversity.lakeside.name=Lake Dorfbewohner
+entity.diversity.lakeside.farmer.name=Bauer
+entity.diversity.lakeside.breeder.name=Züchter
+entity.diversity.lakeside.fisherman.name=Fischer
+entity.diversity.lakeside.guard.name=Wache
+entity.diversity.lakeside.chief.name=Chef
+
+entity.diversity.settled.name=Sesshaften Dorfbewohner
+entity.diversity.settled.butcher.name=Metzger
+entity.diversity.settled.farmer.name=Bauer
+entity.diversity.settled.librarian.name=Bibliothekar
+entity.diversity.settled.priest.name=Priester
+entity.diversity.settled.smith.name=Schmied
+entity.diversity.settled.villager.name=Dorfbewohner
+entity.diversity.settled.guard.name=Wache
+entity.diversity.settled.innkeeper.name=Gastwirt
+
+entity.diversity.mummy.name=Mumie
+entity.diversity.tzitzimime.name=Tzitzimitl
+entity.diversity.warrior_skeleton.name=Krieger Skelett
+entity.diversity.worshipper.name=Anbeter
+
+item.blowgun.name=Blasrohr
+item.dart.name=Pfeil
+item.iron_spear.name=Eisen speer
+item.wooden_spear.name=Holzspeer
+item.stone_spear.name=Stein speer
+item.diamond_spear.name=Diamant speer
+item.golden_spear.name=Goldenen Speer
+
+entity.diversity.darkspider.name=Dunkle Spinne
+entity.diversity.yeti.name=Yeti
+
+entity.diversity.dwarf.name=Zwerg-Dorfbewohner
+entity.diversity.dwarf.warrior.name=Krieger
+entity.diversity.dwarf.smith.name=Schmied
+entity.diversity.dwarf.healer.name=Heiler
+entity.diversity.dwarf.king.name=König
+entity.diversity.dwarf.miner.name=Bergarbeiter
+
+item.phos_water_bucket.name=Phosphoreszierender Wassereimer
+item.poison_water_bucket.name=Vergifteter Wassereimer
+
+tile.phos_mushroom.name=Phosphoreszierender Pilz
+tile.blue_mushroom.name=Blauer Pilz
+tile.blue_vine.name=Blaue Ranke
+tile.fungal.name=Pilzartiger
+tile.fungus.name=Pilz
