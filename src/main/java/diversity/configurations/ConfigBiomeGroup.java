@@ -13,6 +13,7 @@ import java.io.File;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.DimensionManager;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
@@ -29,21 +30,31 @@ public enum ConfigBiomeGroup
     SHROOM_CAVE(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.MAGICAL)),
     YETI_DEN(new BiomeGenBase[]{BiomeGenBase.iceMountains, BiomeGenBase.icePlains.createMutation()}),
     SPIDER_DEN(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.SPOOKY)),
-    VANILLA_VILLAGE(new BiomeGenBase[] {BiomeGenBase.plains, BiomeGenBase.desert, BiomeGenBase.savanna, BiomeGenBase.taiga}),
-    DWARVEN_CAVE(new BiomeGenBase[]{BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsPlus}),
-    APACHE_VILLAGE(new BiomeGenBase[]{BiomeGenBase.mesaPlateau, BiomeGenBase.mesaPlateau_F}),
-    AZTEC_VILLAGE(new BiomeGenBase[]{BiomeGenBase.jungle}),
-    INUIT_VILLAGE(new BiomeGenBase[]{BiomeGenBase.icePlains, BiomeGenBase.coldBeach}),
-    SETTLED_VILLAGE(new BiomeGenBase [] {BiomeGenBase.taiga, BiomeGenBase.taigaHills}),
-    ZULU_VILLAGE(new BiomeGenBase[] {BiomeGenBase.savanna, BiomeGenBase.savannaPlateau}),
+    VANILLA_VILLAGE(null),
+    DWARVEN_CAVE(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.HILLS)),
+    APACHE_VILLAGE(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.MESA)),
+    AZTEC_VILLAGE(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.JUNGLE)),
+    INUIT_VILLAGE(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.COLD)),
+    SETTLED_VILLAGE(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.FOREST)),
+    ZULU_VILLAGE(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.SAVANNA)),
     TIBETAN_VILLAGE(new BiomeGenBase[]{BiomeGenBase.extremeHills}),
     EGYPTIAN_VILLAGE(new BiomeGenBase[] {BiomeGenBase.desert}),
-    LAKESIDE_VILLAGE(new BiomeGenBase[]{BiomeGenBase.swampland});
+    LAKESIDE_VILLAGE(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.SWAMP));
     private BiomeGenBase[] biomes;
     private static final String configNameFile = "diversity-biome-groups.cfg";
     private static final String configFile;
     
-    ConfigBiomeGroup(final BiomeGenBase[] biomes) {
+    ConfigBiomeGroup(BiomeGenBase[] biomes) {
+        if (biomes == null) {
+
+            ArrayList<BiomeGenBase> bims = new ArrayList<BiomeGenBase>();
+            bims.addAll(Arrays.asList(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.PLAINS)));
+            bims.addAll(Arrays.asList(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.CONIFEROUS)));
+            bims.addAll(Arrays.asList(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.SAVANNA)));
+            bims.addAll(Arrays.asList(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.FOREST)));
+
+            biomes = (BiomeGenBase[])bims.toArray();
+        }
         this.biomes = biomes;
     }
     
