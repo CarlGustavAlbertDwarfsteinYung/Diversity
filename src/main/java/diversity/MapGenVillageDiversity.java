@@ -5,6 +5,7 @@
 package diversity;
 
 import diversity.configurations.ConfigBiomeGroup;
+import diversity.configurations.ConfigVillager;
 import net.minecraft.nbt.NBTTagCompound;
 
 import java.util.*;
@@ -105,7 +106,7 @@ public class MapGenVillageDiversity extends MapGenVillage
 
                 //custom and vanilla villages compete for the same biome coin flip
                 if (customVillages && vanillaVillages) {
-                    if (random.nextDouble() > 0.5) {
+                    if (random.nextInt(100) < ConfigGenerationRate.CUSTOMVILLAGECHANCE.getIntegerConfig()) {
                         customVillages = false;
                     }
                 }

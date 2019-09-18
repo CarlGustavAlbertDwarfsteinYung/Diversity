@@ -25,19 +25,19 @@ public enum ConfigBiomeGroup
    // AZTEC_PYRAMID(new BiomeGenBase[] { BiomeGenBase.jungle, BiomeGenBase.jungleHills }),
     CATACOMB(new BiomeGenBase[]{BiomeGenBase.roofedForest}),
    // WITCH_HUTT(new BiomeGenBase[] { BiomeGenBase.swampland }),
-    INN(new BiomeGenBase [] { BiomeGenBase.plains}),
+    INN(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.PLAINS)),
     //JUNGLE_VALLEY(new BiomeGenBase[] { BiomeGenBase.jungle, BiomeGenBase.jungleHills }),
     SHROOM_CAVE(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.MAGICAL)),
     YETI_DEN(new BiomeGenBase[]{BiomeGenBase.iceMountains, BiomeGenBase.icePlains.createMutation()}),
     SPIDER_DEN(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.SPOOKY)),
-    VANILLA_VILLAGE(null),
+    VANILLA_VILLAGE(new BiomeGenBase[] {}),
     DWARVEN_CAVE(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.HILLS)),
     APACHE_VILLAGE(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.MESA)),
     AZTEC_VILLAGE(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.JUNGLE)),
     INUIT_VILLAGE(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.COLD)),
-    SETTLED_VILLAGE(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.FOREST)),
+    SETTLED_VILLAGE(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.CONIFEROUS)),
     ZULU_VILLAGE(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.SAVANNA)),
-    TIBETAN_VILLAGE(new BiomeGenBase[]{BiomeGenBase.extremeHills}),
+    TIBETAN_VILLAGE(new BiomeGenBase[]{BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsPlus, BiomeGenBase.taigaHills}),
     EGYPTIAN_VILLAGE(new BiomeGenBase[] {BiomeGenBase.desert}),
     LAKESIDE_VILLAGE(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.SWAMP));
     private BiomeGenBase[] biomes;
@@ -45,15 +45,15 @@ public enum ConfigBiomeGroup
     private static final String configFile;
     
     ConfigBiomeGroup(BiomeGenBase[] biomes) {
-        if (biomes == null) {
-
-            ArrayList<BiomeGenBase> bims = new ArrayList<BiomeGenBase>();
+        if (biomes.length == 0) {
+            //generate vanilla villages list manually
+            ArrayList<BiomeGenBase> bims = new ArrayList<>();
             bims.addAll(Arrays.asList(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.PLAINS)));
             bims.addAll(Arrays.asList(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.CONIFEROUS)));
             bims.addAll(Arrays.asList(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.SAVANNA)));
             bims.addAll(Arrays.asList(BiomeDictionary.getBiomesForType(BiomeDictionary.Type.FOREST)));
 
-            biomes = (BiomeGenBase[])bims.toArray();
+            biomes = bims.toArray(new BiomeGenBase[bims.size()]);
         }
         this.biomes = biomes;
     }

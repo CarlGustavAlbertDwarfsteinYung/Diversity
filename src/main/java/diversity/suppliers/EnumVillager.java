@@ -79,8 +79,8 @@ public enum EnumVillager implements VillagerRegistry.IVillageTradeHandler
     private final List<Economy.IItem> sellList;
     
     EnumVillager(final EnumTribe tribe, final String name, final Economy.IItem[] buyList, final Economy.IItem[] sellList, final boolean isChief) {
-        this.buyList = new ArrayList<Economy.IItem>();
-        this.sellList = new ArrayList<Economy.IItem>();
+        this.buyList = new ArrayList<>();
+        this.sellList = new ArrayList<>();
         tribe.villagers.add(this);
         this.tribe = tribe;
         this.villagerName = name;
@@ -114,7 +114,7 @@ public enum EnumVillager implements VillagerRegistry.IVillageTradeHandler
     
     public static void register() {
         for (final EnumVillager villager : values()) {
-            VillagerRegistry.instance().registerVillageTradeHandler(villager.profession, (VillagerRegistry.IVillageTradeHandler)villager);
+            VillagerRegistry.instance().registerVillageTradeHandler(villager.profession, villager);
             Diversity.proxy.registerVillagerSkin(villager);
         }
     }

@@ -7,12 +7,13 @@ package diversity.entity;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import diversity.item.ItemSpear;
+import net.minecraft.command.IEntitySelector;
+import net.minecraft.entity.ai.*;
+import net.minecraft.entity.monster.*;
 import net.minecraft.util.IIcon;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.passive.EntityHorse;
 import net.minecraft.entity.passive.EntityWolf;
-import net.minecraft.entity.monster.EntityGhast;
-import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.util.DamageSource;
@@ -29,35 +30,17 @@ import net.minecraft.entity.ai.attributes.IAttributeInstance;
 import net.minecraft.entity.SharedMonsterAttributes;
 import diversity.Diversity;
 import diversity.entity.ai.EntityAIOpenGate;
-import net.minecraft.entity.ai.EntityAIWatchClosest;
-import net.minecraft.entity.ai.EntityAIWander;
-import net.minecraft.entity.ai.EntityAIWatchClosest2;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.ai.EntityAIPlay;
-import net.minecraft.entity.ai.EntityAIFollowGolem;
-import net.minecraft.entity.ai.EntityAIVillagerMate;
-import net.minecraft.entity.ai.EntityAIOpenDoor;
-import net.minecraft.entity.ai.EntityAIRestrictOpenDoor;
-import net.minecraft.entity.ai.EntityAIMoveIndoors;
-import net.minecraft.entity.ai.EntityAIAvoidEntity;
-import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.ai.EntityAISwimming;
 import diversity.entity.ai.EntityAIChiefHurtByTarget;
-import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.EntityCreature;
-import net.minecraft.entity.ai.EntityAIHurtByTarget;
 import diversity.suppliers.EnumVillager;
 import net.minecraft.world.World;
-import net.minecraft.entity.ai.EntityAILookAtTradePlayer;
-import net.minecraft.entity.ai.EntityAITradePlayer;
-import net.minecraft.entity.ai.EntityAIMoveTowardsRestriction;
-import net.minecraft.entity.ai.EntityAIBase;
 import diversity.suppliers.EnumTribe;
 import net.minecraft.village.Village;
 import net.minecraft.entity.passive.EntityVillager;
 
-public abstract class EntityGlobalVillager extends EntityVillager
+public abstract class EntityGlobalVillager extends EntityVillager implements IEntitySelector
 {
     private Village villageObj;
     public final EnumTribe tribe;
@@ -69,6 +52,9 @@ public abstract class EntityGlobalVillager extends EntityVillager
     private EntityAIBase entityHurt;
     private EntityAITradePlayer aiTradePlayer;
     private EntityAILookAtTradePlayer aiLookAtTradePlayer;
+    private EntityAIMoveIndoors aiMoveIndoors;
+    public boolean fleeing = false;
+    private int fleeCheckTimer;
     
     public EntityGlobalVillager(final World world) {
         this(world, EnumVillager.SETTLED_VILLAGER);
@@ -83,12 +69,13 @@ public abstract class EntityGlobalVillager extends EntityVillager
         this.entityHurt = new EntityAIHurtByTarget(this, true);
         this.aiTradePlayer = new EntityAITradePlayer(this);
         this.aiLookAtTradePlayer = new EntityAILookAtTradePlayer(this);
+        this.aiMoveIndoors = new EntityAIMoveIndoors(this);
         this.tasks.taskEntries.clear();
         this.tasks.addTask(0, new EntityAISwimming(this));
         this.tasks.addTask(2, new EntityAIAvoidEntity(this, EntityZombie.class, 8.0f, 0.6, 0.6));
         this.tasks.addTask(2, this.aiTradePlayer);
         this.tasks.addTask(2, this.aiLookAtTradePlayer);
-        this.tasks.addTask(3, new EntityAIMoveIndoors(this));
+        this.tasks.addTask(3, this.aiMoveIndoors);
         this.tasks.addTask(4, new EntityAIRestrictOpenDoor(this));
         this.tasks.addTask(5, new EntityAIOpenDoor(this, true));
         this.tasks.addTask(7, new EntityAIVillagerMate(this));
@@ -102,6 +89,51 @@ public abstract class EntityGlobalVillager extends EntityVillager
         this.tribe = type.tribe;
         this.updateTasks(type);
     }
+
+    @Override
+    public boolean canAttackClass(Class p_70686_1_) {
+        return EntityCreeper.class != p_70686_1_ && this.getClass() != p_70686_1_;
+    }
+
+    @Override
+    public boolean isEntityApplicable(Entity entity) {
+        if(!(entity instanceof IMob)) {
+            if(this.villageObj != null && entity instanceof EntityPlayer) {
+                EntityPlayer player = (EntityPlayer)entity;
+                EntityLivingBase target = player.getAITarget();
+                if(target instanceof EntityPlayer && this.villageObj.getReputationForPlayer(target.getCommandSenderName()) == 10) {
+                    return true;
+                }
+            }
+
+            return false;
+        } else {
+            if (entity instanceof EntityZombie) {
+                return true;
+            } else if (entity instanceof EntityLivingBase) {
+                if (((EntityLivingBase) entity).getEntityAttribute(SharedMonsterAttributes.attackDamage).getBaseValue() > 5.0D) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
+    public void updateFleeTask() {
+        if (fleeing) {
+            super.tasks.removeTask(this.attackOnCollide);
+            this.tasks.addTask(3, aiMoveIndoors);
+            this.targetTasks.taskEntries.clear();
+            super.setAttackTarget(null);
+        } else {
+            this.tasks.removeTask(aiMoveIndoors);
+            this.tasks.addTask(1, this.attackOnCollide);
+            this.targetTasks.addTask(2, this.chiefHurt);
+            this.targetTasks.addTask(3, this.entityHurt);
+            super.targetTasks.addTask(2, new EntityAIHurtByTarget(this, true));
+            super.targetTasks.addTask(3, new EntityAINearestAttackableTarget(this, EntityLivingBase.class, 0, false, true, this));
+        }
+    }
     
     public void updateTasks(final EnumVillager type) {
         if (this.canAskForHelp() && !this.isChild()) {
@@ -111,14 +143,16 @@ public abstract class EntityGlobalVillager extends EntityVillager
             this.targetTasks.removeTask(this.askForHelp);
         }
         if (this.canDefend() && !this.isChild()) {
-            if (type != EnumVillager.TIBETAN_MONK) {
-                this.tasks.removeTask(this.aiTradePlayer);
-                this.tasks.removeTask(this.aiLookAtTradePlayer);
-            }
+            this.tasks.removeTask(this.aiTradePlayer);
+            this.tasks.removeTask(this.aiLookAtTradePlayer);
+            this.tasks.removeTask(this.aiLookAtTradePlayer);
+            this.tasks.removeTask(aiMoveIndoors);
             this.tasks.addTask(1, this.attackOnCollide);
             this.tasks.addTask(1, this.aiMoveTowardsRestriction);
             this.targetTasks.addTask(2, this.chiefHurt);
             this.targetTasks.addTask(3, this.entityHurt);
+            super.targetTasks.addTask(2, new EntityAIHurtByTarget(this, true));
+            super.targetTasks.addTask(3, new EntityAINearestAttackableTarget(this, EntityLivingBase.class, 0, false, true, this));
         }
         else {
             this.tasks.removeTask(this.attackOnCollide);
@@ -133,6 +167,9 @@ public abstract class EntityGlobalVillager extends EntityVillager
     
     @Override
     protected void applyEntityAttributes() {
+        if (this.canDefend() && !this.isChild()) {
+            this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(40.0D);
+        }
         super.applyEntityAttributes();
         final IAttributeInstance attribute = this.getEntityAttribute(SharedMonsterAttributes.attackDamage);
         if (attribute != null) {
@@ -181,6 +218,19 @@ public abstract class EntityGlobalVillager extends EntityVillager
     @Override
     protected void updateAITick() {
         super.updateAITick();
+        if (--fleeCheckTimer <= 0) {
+            this.fleeCheckTimer = 40;
+            if (this.canDefend() && !this.isChild()) {
+                if (!fleeing && this.getHealth() < 16.0F) {
+                    fleeing = true;
+                    updateFleeTask();
+                } else if (fleeing && this.getHealth() == this.getMaxHealth()) {
+                    fleeing = false;
+                    updateFleeTask();
+                }
+            }
+        }
+
         final int randomTickDivider = this.randomTickDivider - 1;
         this.randomTickDivider = randomTickDivider;
         if (randomTickDivider <= 0) {
@@ -190,6 +240,10 @@ public abstract class EntityGlobalVillager extends EntityVillager
                 if (this.villageObj.isAnnihilated()) {
                     VillageData.onAnihilated(this.villageObj);
                     return;
+                } else {
+                    if(this.getAttackTarget() == null) {
+                        this.heal(2.0F);
+                    }
                 }
                 final EntityGlobalVillager chief = (EntityGlobalVillager)this.getChief();
                 if (this.isChief()) {
